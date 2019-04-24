@@ -2,10 +2,8 @@ package pages;
 
 import org.junit.Assert;
 import org.openqa.selenium.*;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -30,9 +28,6 @@ public class OrderPage {
 
     @FindBy(className = "order-steps__item--done")
     WebElement orderStepStatusDone;
-
-    @FindBy(className = "order-summary__description")
-    WebElement summaryDescription;
 
     @FindBy(xpath = "//div[@id='root']/div/div/main/div/div[2]/div/div[2]/div/button")
     WebElement nextButton;
@@ -106,20 +101,17 @@ public class OrderPage {
     @FindBy(id = "shipping_order_phone")
     WebElement phoneShipping;
 
-    @FindBy(id = "order_summary_quantity")
-    WebElement quantitySummary;
-
-    @FindBy(id = "order_summary_size")
-    WebElement sizeSummary;
-
-    @FindBy(id = "order_summary_production")
-    WebElement planSummary;
-
     @FindBy(xpath = "//div/span[2]")
     WebElement priceOfCards;
 
     @FindBy(xpath = "//div[2]/span[2]")
     WebElement priceofDiscount;
+
+    @FindBy(xpath = "//div[2]/span[2]")
+    WebElement priceOfExtraDesignOnly;
+
+    @FindBy(xpath = "//div[2]/span[2]")
+    WebElement priceOfTaxDesignOnly;
 
     @FindBy(xpath = "//div[3]/span[2]")
     WebElement priceOfExtras;
@@ -136,6 +128,9 @@ public class OrderPage {
     @FindBy(xpath = "//div[2]/div/div/div[2]/span[2]")
     WebElement totalPrice;
 
+    @FindBy(xpath = "//div[2]/div[2]/span[2]")
+    WebElement totalPriceDesignOnly;
+
     @FindBy(xpath = "//div[3]/div/div/div/div/div/div")
     WebElement nameBillingConfirm;
 
@@ -146,6 +141,9 @@ public class OrderPage {
     WebElement addressBillingConfirm;
 
     @FindBy(xpath = "//div[3]/div/div/div/div/div/div[4]")
+    WebElement address2BillingConfirm;
+
+    @FindBy(xpath = "//div/div[5]")
     WebElement cityStateBillingConfirm;
 
     @FindBy(xpath = "//div/div/div[2]/div/div/div")
@@ -157,11 +155,17 @@ public class OrderPage {
     @FindBy(xpath = "//div/div/div[2]/div/div/div[3]")
     WebElement addressShippingConfirm;
 
-    @FindBy(css = ".order-form__column:nth-child(2) div:nth-child(4)")
+    @FindBy(xpath = "//div[2]/div/div/div[4]")
+    WebElement address2ShippingConfirm;
+
+    @FindBy(xpath = "//div[2]/div/div/div[5]")
     WebElement cityStateShippingConfirm;
 
     @FindBy(xpath = "//label/span")
     WebElement expressDesign;
+
+    @FindBy(xpath = "//div[2]/div/div/div/div/label/span")
+    WebElement expressDesignDesignOnly;
 
     @FindBy(xpath = "//div[2]/div/label/span")
     WebElement extraPrizes;
@@ -179,7 +183,7 @@ public class OrderPage {
     WebElement thirdShippingChoise;
 
     @FindBy(xpath = "//div/input")
-    WebElement dicountCode;
+    WebElement discountCode;
 
     @FindBy(xpath = "//button[contains(.,'Apply')]")
     WebElement applyButton;
@@ -210,6 +214,24 @@ public class OrderPage {
 
     @FindBy(className = "order-success__number")
     WebElement orderNumber;
+
+    @FindBy(id = "email_change")
+    WebElement changeEmailField;
+
+    @FindBy(xpath = "//button[contains(.,'Change Email')]")
+    WebElement changeEmailButton;
+
+    @FindBy(xpath = "//div[2]/div/div/span")
+    WebElement planDisplayed;
+
+    @FindBy(xpath = "//label/span")
+    WebElement checkboxAgreement;
+
+    @FindBy(css = ".text-green:nth-child(1)")
+    WebElement headlineAgreement;
+
+    @FindBy(xpath = "//div[2]/div/button")
+    WebElement toFollowUpButton;
 
     public void firstNameBillingValidation()
     {
@@ -635,7 +657,7 @@ public class OrderPage {
         Assert.assertFalse("Error if right phone number was entered", isElementPresent("//p[contains(.,'\"Phone Number\" is required')]"));
     }
 
-    public void returnToHomePage()
+    public void goBackButton()
     {
         backButton.click();
     }
@@ -661,10 +683,46 @@ public class OrderPage {
         float ship = Float.parseFloat(priceofShipping.getText().substring(1));
         Assert.assertTrue("Total price is wrong", totalPrice.getText().compareTo(priceOfCards.getText()) == 0);
         float total = Float.parseFloat(totalPrice.getText().substring(1));
-        Assert.assertEquals("Sum of elements isn't equal to total price", total, cards + disc + extra + ship, 0.001);
+        Assert.assertEquals("Sum of elements isn't equal to total price", total, cards - disc + extra + ship, 0.001);
     }
 
-    public void checkSummaryOrderReview(String quantitySelected, String sizeSelected, String planSelected, boolean extra1Selected, boolean extra2Selected, boolean extra3Selected, String shippingSelected, String discountSelected)
+    public void checkSummaryContactInfoAfterReview(String cards, String disc, String extra, String ship)
+    {
+        Assert.assertTrue("Price of cards is wrong", priceOfCards.getText().compareTo(cards) == 0);
+        float cardsNow = Float.parseFloat(priceOfCards.getText().substring(1));
+        Assert.assertTrue("Price of discount is wrong", priceofDiscount.getText().compareTo(disc) == 0);
+        float discNow = Float.parseFloat(priceofDiscount.getText().substring(2));
+        Assert.assertTrue("Price of extras is wrong", priceOfExtras.getText().compareTo(extra) == 0);
+        float extraNow = Float.parseFloat(priceOfExtras.getText().substring(1));
+        Assert.assertTrue("Price of shipping is wrong", priceofShipping.getText().compareTo(ship) == 0);
+        float shipNow = Float.parseFloat(priceofShipping.getText().substring(1));
+
+        float total = Float.parseFloat(totalPrice.getText().substring(1));
+        Assert.assertEquals("Sum of elements isn't equal to total price", total, cardsNow - discNow + extraNow + shipNow, 0.001);
+    }
+
+    public String getPricingOfCards()
+    {
+        return priceOfCards.getText();
+    }
+
+    public String getPricingOfDiscount()
+    {
+        return priceofDiscount.getText();
+    }
+
+    public String getPricingOfExtras()
+    {
+        return priceOfExtras.getText();
+    }
+
+    public String getPricingOfShipping()
+    {
+        return priceofShipping.getText();
+    }
+
+    public void checkSummaryOrderReview(String quantitySelected, String sizeSelected, String planSelected, boolean extra1Selected, boolean extra2Selected, boolean extra3Selected, String shippingSelected,
+                                        String discountSelected)
     {
         checkCardPrice(quantitySelected, sizeSelected, planSelected);
         float cards = Float.parseFloat(priceOfCards.getText().substring(1));
@@ -679,7 +737,7 @@ public class OrderPage {
         Assert.assertEquals("Sum of elements isn't equal to total price", total, cards - disc + extra + ship, 0.001);
     }
 
-    public void checkSummaryPayment (String quantitySelected, String sizeSelected, String city, String shippingSelected, String discountSelected)
+    public void checkSummaryPayment (String quantitySelected, String sizeSelected, String city, String shippingSelected)
     {
         float subtotal = Float.parseFloat(subtotalPrice.getText().substring(1));
         float disc = Float.parseFloat(webDriver.findElement(By.xpath("//div[2]/div/div[2]/span[2]")).getText().substring(2));
@@ -692,130 +750,186 @@ public class OrderPage {
         Assert.assertEquals("Sum of elements isn't equal to total price", total, subtotal - disc + ship + tax, 0.001);
     }
 
-
-    public void enterCredentialsBilling(String country, String city) throws InterruptedException
+    public String enterCredentialsBilling(String firstName, String lastName, String company, String email, String address1, String address2, String country, String city, String zip, String phone)
     {
-        firstNameBilling.sendKeys("Amelia");
-        lastNameBilling.sendKeys("Pond");
-        companyBilling.sendKeys("Atlass Industries");
-        emailBilling.sendKeys("amelia@teamdoctor.com");
-        address1Billing.sendKeys("123 street, 54");
-        address2Billing.sendKeys("456 street, 5");
+        firstNameBilling.sendKeys(firstName);
+        lastNameBilling.sendKeys(lastName);
+        companyBilling.sendKeys(company);
+        emailBilling.sendKeys(email);
+        address1Billing.sendKeys(address1);
+        address2Billing.sendKeys(address2);
 
-        if (country.compareTo("United States") == 0)
-        {
-            chooseCountryUSABilling();
-            synchronized (wait) {
-                wait.wait(10000);
-            }
-            cityBilling.sendKeys(city);
-            cityBilling.sendKeys(Keys.ENTER);
-        }
-        else
-        {
-            chooseCountryCanadaBilling();
-            synchronized (wait) {
-                wait.wait(6000);
-            }
-            cityBilling.sendKeys(city);
-            cityBilling.sendKeys(Keys.ENTER);
+        chooseCountryBilling(country);
+        wait.until(ExpectedConditions.elementToBeClickable(cityBilling));
 
-        }
+        cityBilling.sendKeys(city);
+        cityBilling.sendKeys(Keys.ENTER);
 
-        zipBilling.sendKeys("1234567");
-        phoneBilling.sendKeys("79043222367");
+        zipBilling.sendKeys(zip);
+        phoneBilling.sendKeys(phone);
+
+        return stateBilling.getAttribute("value");
     }
 
-    public void confirmShippingAndBillingIfNoShipping(String country)
+    public void confirmShippingAndBillingIfNoShipping(String name, String company, String address1, String address2, String city, String state, String zip)
     {
-        Assert.assertTrue("Wrong name", nameBillingConfirm.getText().compareTo("Amelia Pond") == 0);
-        Assert.assertTrue("Wrong company", companyBillingConfirm.getText().compareTo("Atlass Industries") == 0);
-        Assert.assertTrue("Wrong address", addressBillingConfirm.getText().compareTo("123 street, 54, 456 street, 5") == 0);
-        if (country.compareTo("United States") == 0)
-        {
-            Assert.assertTrue("Wrong city or state", cityStateBillingConfirm.getText().compareTo("New York New York 1234567") == 0);
-        }
-        else
-        {
-            Assert.assertTrue("Wrong city or state", cityStateBillingConfirm.getText().compareTo("Quatsino British Columbia 1234567") == 0);
-        }
+        Assert.assertTrue("Wrong name", nameBillingConfirm.getText().compareTo(name) == 0);
+        Assert.assertTrue("Wrong company", companyBillingConfirm.getText().compareTo(company) == 0);
+        Assert.assertTrue("Wrong address", addressBillingConfirm.getText().compareTo(address1) == 0);
+        Assert.assertTrue("Wrong address 2", address2BillingConfirm.getText().compareTo(address2) == 0);
+        Assert.assertTrue("Wrong city or state", cityStateBillingConfirm.getText().compareTo(city + ", " + state + ", " + zip) == 0);
 
+        Assert.assertTrue("Wrong shipping name", nameShippingConfirm.getText().compareTo(name) == 0);
+        Assert.assertTrue("Wrong shipping company", companyShippingConfirm.getText().compareTo(company) == 0);
+        Assert.assertTrue("Wrong shipping address", addressShippingConfirm.getText().compareTo(address1) == 0);
+        Assert.assertTrue("Wrong shipping address", address2ShippingConfirm.getText().compareTo(address2) == 0);
+        Assert.assertTrue("Wrong shipping city or state", cityStateShippingConfirm.getText().compareTo(city + ", " + state + ", " + zip) == 0);
     }
 
-    public void enterCredentialShipping(String country) throws InterruptedException
+    public String enterCredentialShipping(String firstName, String lastName, String company, String email, String address1, String address2, String country, String city, String zip, String phone)
     {
-        firstNameShipping.sendKeys("Rory");
-        lastNameShipping.sendKeys("Williams");
-        companyShipping.sendKeys("Team Doctor");
-        emailShipping.sendKeys("rory@teamdoctor.com");
-        address1Shipping.sendKeys("456 street, 78");
-        address2Shipping.sendKeys("Baker street 50");
+        firstNameShipping.sendKeys(firstName);
+        lastNameShipping.sendKeys(lastName);
+        companyShipping.sendKeys(company);
+        emailShipping.sendKeys(email);
+        address1Shipping.sendKeys(address1);
+        address2Shipping.sendKeys(address2);
 
-        if (country.compareTo("United States") == 0)
-        {
-            chooseCountryUSAShipping();
-            synchronized (wait) {
-                wait.wait(5000);
-            }
-            cityShipping.sendKeys("Yale");
-            cityShipping.sendKeys(Keys.ENTER);
-        }
-        else
-        {
-            chooseCountryCanadaShipping();
-            synchronized (wait) {
-                wait.wait(5000);
-            }
-            cityShipping.sendKeys("Ulverton");
-            cityShipping.sendKeys(Keys.ENTER);
-        }
+        chooseCountryShipping(country);
+        wait.until(ExpectedConditions.elementToBeClickable(cityShipping));
 
-        zipShipping.sendKeys("7894561");
-        phoneShipping.sendKeys("79515879564");
+        cityShipping.sendKeys(city);
+        cityShipping.sendKeys(Keys.ENTER);
+
+        zipShipping.sendKeys(zip);
+        phoneShipping.sendKeys(phone);
+
+        return stateShipping.getAttribute("value");
     }
 
-    public void confirmShippingAndBillingWithShipping(String countryBilling, String countryShipping)
+    public void confirmShippingAndBillingWithShipping(String nameBilling, String companyBilling, String address1Billing, String address2Billing, String cityBilling, String stateBilling, String zipBilling,
+                                                      String nameShipping, String companyShipping, String address1Shipping, String address2Shipping, String cityShipping, String stateShipping, String zipShipping)
     {
-        Assert.assertTrue("Wrong billing name", nameBillingConfirm.getText().compareTo("Amelia Pond") == 0);
-        Assert.assertTrue("Wrong billing company", companyBillingConfirm.getText().compareTo("Atlass Industries") == 0);
-        Assert.assertTrue("Wrong billing address", addressBillingConfirm.getText().compareTo("123 street, 54, 456 street, 5") == 0);
-        if (countryBilling.compareTo("United States") == 0)
-        {
-            Assert.assertTrue("Wrong billing city or state", cityStateBillingConfirm.getText().compareTo("New York New York 1234567") == 0);
-        }
-        else
-        {
-            Assert.assertTrue("Wrong billing city or state", cityStateBillingConfirm.getText().compareTo("Quatsino British Columbia 1234567") == 0);
-        }
+        Assert.assertTrue("Wrong billing name", nameBillingConfirm.getText().compareTo(nameBilling) == 0);
+        Assert.assertTrue("Wrong billing company", companyBillingConfirm.getText().compareTo(companyBilling) == 0);
+        Assert.assertTrue("Wrong billing address", addressBillingConfirm.getText().compareTo(address1Billing) == 0);
+        Assert.assertTrue("Wrong billing address", address2BillingConfirm.getText().compareTo(address2Billing) == 0);
+        Assert.assertTrue("Wrong billing city or state", cityStateBillingConfirm.getText().compareTo(cityBilling + ", " + stateBilling + ", " + zipBilling) == 0);
 
-        Assert.assertTrue("Wrong shipping name", nameShippingConfirm.getText().compareTo("Rory Williams") == 0);
-        Assert.assertTrue("Wrong shipping company", companyShippingConfirm.getText().compareTo("Team Doctor") == 0);
-        Assert.assertTrue("Wrong shipping address", addressShippingConfirm.getText().compareTo("456 street, 78, Baker street 50") == 0);
-        if (countryShipping.compareTo("United states") == 0)
-        {
-            Assert.assertTrue("Wrong city or state", cityStateShippingConfirm.getText().compareTo("Yale Iowa 7894561") == 0);
-        }
-        else
-        {
-            Assert.assertTrue("Wrong shipping city or state", cityStateShippingConfirm.getText().compareTo("Ulverton Quebec 7894561") == 0);
-        }
+
+        Assert.assertTrue("Wrong shipping name", nameShippingConfirm.getText().compareTo(nameShipping) == 0);
+        Assert.assertTrue("Wrong shipping company", companyShippingConfirm.getText().compareTo(companyShipping) == 0);
+        Assert.assertTrue("Wrong shipping address", addressShippingConfirm.getText().compareTo(address1Shipping) == 0);
+        Assert.assertTrue("Wrong shipping address", address2ShippingConfirm.getText().compareTo(address2Shipping) == 0);
+        Assert.assertTrue("Wrong shipping city or state", cityStateShippingConfirm.getText().compareTo(cityShipping + ", " + stateShipping + ", " + zipShipping) == 0);
     }
 
-    public void enterCardCredential()
+    public void enterCardCredential(String name, String number, String month, String year, String cvv)
     {
-        creditCardName.sendKeys("Amelia");
-        creditCardNumber.sendKeys("4276450018854261");
-        Select month = new Select (creditCardMonth);
-        month.selectByVisibleText("01");
-        Select year = new Select(creditCardYear);
-        year.selectByVisibleText("2020");
-        creditCardCVV.sendKeys("587");
-        acceptCheckbox.click();
+        creditCardName.sendKeys(name);
+        creditCardNumber.sendKeys(number);
+        cardMonthEnter(month);
+        cardYearEnter(year);
+        creditCardCVV.sendKeys(cvv);
         clickConfirm();
+    }
+
+    public void cardNameValidation() throws InterruptedException
+    {
+        wait.until(ExpectedConditions.elementToBeClickable(creditCardCVV));
+
+        creditCardName.sendKeys("1234567890");
+        clickConfirm();
+        wait1000ms();
+
+        Assert.assertTrue("No error if numbers in name are entered", isElementPresent("//p[contains(.,'The order payment name field is required.')]"));
+
+        creditCardName.sendKeys("!@#$%^&*()_=+[]{};:'\"");
+        clickConfirm();
+        wait1000ms();
+
+        Assert.assertTrue("No error if special symbols in name are entered", isElementPresent("//p[contains(.,'The order payment name field is required.')]"));
+
+        creditCardName.sendKeys("Anastacia Pischikova");
+        clickConfirm();
+        wait1000ms();
+
+        Assert.assertFalse("Error if right name was entered", isElementPresent("//p[contains(.,'The order payment name field is required.')]"));
+    }
+
+    public void cardNumberValidation() throws InterruptedException
+    {
+        creditCardNumber.sendKeys("!@#$%^&*()_=+[]{};:'\"");
+        clickConfirm();
+        wait1000ms();
+
+        Assert.assertTrue("No error if special symbols in number are entered", isElementPresent("//p[contains(.,'The order payment card field is required.')]"));
+
+        creditCardNumber.sendKeys("qwertyuiopasdfghjklzxcvbnm");
+        clickConfirm();
+        wait1000ms();
+
+        Assert.assertTrue("No error if letters in number are entered", isElementPresent("//p[contains(.,'The order payment card field is required.')]"));
+
+        creditCardNumber.sendKeys("4111111111111111");
+        clickConfirm();
+
+        wait1000ms();
+
+        Assert.assertFalse("Error if right number was entered", isElementPresent("//p[contains(.,'The order payment card field is required.')]"));
+    }
+
+    public void cardCVVValidation() throws InterruptedException
+    {
+        creditCardCVV.sendKeys("qwertyuiopasdfghjklzxcvbnm");
+        clickConfirm();
+        wait1000ms();
+
+        Assert.assertTrue("No error if letters in cvv are entered", isElementPresent("//p[contains(.,'The order payment cvv field is required.')]"));
+
+        creditCardCVV.sendKeys("!@#$%^&*()_=+[]{};:'\"");
+        clickConfirm();
+        wait1000ms();
+
+        Assert.assertTrue("No error if special symbols in cvv are entered", isElementPresent("//p[contains(.,'The order payment cvv field is required.')]"));
+
+        creditCardCVV.sendKeys("54345234");
+        clickConfirm();
+        wait1000ms();
+
+        Assert.assertTrue("No error if special symbols in cvv are entered", isElementPresent("//p[contains(.,'The order payment cvv must be between 3 and 4 digits')]"));
+
+        creditCardCVV.clear();
+        creditCardCVV.sendKeys("54");
+        clickConfirm();
+        wait1000ms();
+
+        Assert.assertTrue("No error if special symbols in cvv are entered", isElementPresent("//p[contains(.,'The order payment cvv must be between 3 and 4 digits')]"));
+
+        creditCardCVV.clear();
+        creditCardCVV.sendKeys("545");
+
+        wait1000ms();
+
+        Assert.assertFalse("Error if right number was entered", isElementPresent("//p[contains(.,'The order payment cvv field is required.')]"));
+        Assert.assertFalse("Error if right number was entered", isElementPresent("//p[contains(.,'The order payment cvv must be between 3 and 4 digits')]"));
+    }
+
+    public void cardMonthEnter(String monthSelected)
+    {
+        Select month = new Select (creditCardMonth);
+        month.selectByVisibleText(monthSelected);
+    }
+
+    public void cardYearEnter(String yearSelected)
+    {
+        Select month = new Select (creditCardYear);
+        month.selectByVisibleText(yearSelected);
     }
 
     public void chooseExtra(boolean extra1, boolean extra2, boolean extra3)
     {
+        wait.until(ExpectedConditions.elementToBeClickable(variableData));
         if (extra1) expressDesign.click();
         if (extra2) extraPrizes.click();
         if (extra3) variableData.click();
@@ -823,6 +937,7 @@ public class OrderPage {
 
     public void chooseShipping(String shipping)
     {
+        wait.until(ExpectedConditions.elementToBeClickable(thirdShippingChoise));
         if ((shipping.compareTo("2-day USA JSI") == 0) || (shipping.compareTo("2-day Canada JSI") == 0)) firstShippingChoise.click();
         else if ((shipping.compareTo("Overnight USA JSI") == 0) || (shipping.compareTo("Priority Canada JSI") == 0)) secondShippingChoise.click();
         else if ((shipping.compareTo("Ground Hi & AK JSI") == 0) || (shipping.compareTo("Ground 48 States JSI") == 0) || (shipping.compareTo("Ground Canada JSI") == 0)) thirdShippingChoise.click();
@@ -831,33 +946,21 @@ public class OrderPage {
     public void enterPromoCode(String promoCode)
     {
         if (promoCode.compareTo("none") != 0) {
-            dicountCode.sendKeys(promoCode);
+            discountCode.sendKeys(promoCode);
             applyButton.click();
         }
     }
 
-    public void chooseCountryUSABilling()
+    public void chooseCountryBilling(String country)
     {
         Select select = new Select (countryBilling);
-        select.selectByVisibleText("United States");
+        select.selectByVisibleText(country);
     }
 
-    public void chooseCountryCanadaBilling()
+    public void chooseCountryShipping(String country)
     {
-        Select select = new Select (countryBilling);
-        select.selectByVisibleText("Canada");
-    }
-
-    public void chooseCountryUSAShipping()
-    {
-        Select select = new Select (countryBilling);
-        select.selectByVisibleText("United States");
-    }
-
-    public void chooseCountryCanadaShipping()
-    {
-        Select select = new Select (countryBilling);
-        select.selectByVisibleText("Canada");
+        Select select = new Select (countryShipping);
+        select.selectByVisibleText(country);
     }
 
     public void clickNext()
@@ -868,8 +971,16 @@ public class OrderPage {
 
     public void clickConfirm()
     {
-        JavascriptExecutor js = (JavascriptExecutor) webDriver;
-        js.executeScript("arguments[0].click();", confirmButton);
+        if (confirmButton.isEnabled()) {
+            JavascriptExecutor js = (JavascriptExecutor) webDriver;
+            js.executeScript("arguments[0].click();", confirmButton);
+        }
+        else
+        {
+            acceptCheckbox.click();
+            JavascriptExecutor js = (JavascriptExecutor) webDriver;
+            js.executeScript("arguments[0].click();", confirmButton);
+        }
     }
 
     public void checkCardPrice(String quantitySelected, String sizeSelected, String planSelected)
@@ -919,6 +1030,7 @@ public class OrderPage {
         else if (quantitySelected == "2500" && sizeSelected == "4x6" && planSelected == "Quick-turn") Assert.assertTrue("Price of cards is wrong", priceOfCards.getText().compareTo("$1199.00") == 0);
         else if (quantitySelected == "5000" && sizeSelected == "4x6" && planSelected == "Quick-turn") Assert.assertTrue("Price of cards is wrong", priceOfCards.getText().compareTo("$1869.00") == 0);
         else if (quantitySelected == "10000" && sizeSelected == "4x6" && planSelected == "Quick-turn") Assert.assertTrue("Price of cards is wrong", priceOfCards.getText().compareTo("$2599.00") == 0);
+        else if (planSelected == "Design only") Assert.assertTrue("Price of cards is wrong", priceOfCards.getText().compareTo("$69.00") == 0);
     }
 
     public void checkDiscount(String discount)
@@ -1102,14 +1214,95 @@ public class OrderPage {
         }
     }
 
-    public void checkEmail()
+    public void checkEmail(String email)
     {
-        Assert.assertTrue("Emails aren't equal", emailDesignDetails.getText().compareTo("amelia@teamdoctor.com") == 0);
+        Assert.assertTrue("Emails aren't equal", emailDesignDetails.getText().compareTo(email) == 0);
+    }
+
+    public void enterNewEmail(String email)
+    {
+        changeEmailField.sendKeys(email);
+        changeEmailButton.click();
     }
 
     public String getOrderNumber ()
     {
         return orderNumber.getText();
+    }
+
+    public void checkPlanName()
+    {
+        planDisplayed.getText().compareTo("Design only:");
+    }
+
+    public void chooseExtraDesignOnly (boolean extra)
+    {
+        if (extra) expressDesignDesignOnly.click();
+    }
+
+    public void clickAgreement()
+    {
+        checkboxAgreement.click();
+    }
+
+    public void checkSummaryReviewDesignOnly()
+    {
+        Assert.assertTrue("", priceOfExtraDesignOnly.getText().compareTo("$29.00") == 0);
+        checkCardPrice("", "", "Design only");
+    }
+
+    public void checkSummaryPaymentDesignOnly(String city)
+    {
+        Assert.assertTrue("", subtotalPrice.getText().compareTo("$98.00") == 0);
+
+        float subtotal = Float.parseFloat(subtotalPrice.getText().substring(1));
+        float tax = Float.parseFloat(priceOfTaxDesignOnly.getText().substring(1));
+        float total = Float.parseFloat(totalPriceDesignOnly.getText().substring(1));
+
+        if (city.compareTo("Quatsino") == 0)
+        {
+            double expected = subtotal * 0.0326;
+            double round = Math.round(expected * 100.0) / 100.0;
+            Assert.assertEquals("Tax is wrong", round, tax, 0.001);
+        }
+        else if (city.compareTo("New York") == 0)
+        {
+            double expected = subtotal * 0.0779;
+            double round = Math.round(expected * 100.0) / 100.0;
+            Assert.assertEquals("Tax is wrong", round, tax, 0.001);
+        }
+        else if (city.compareTo("Palmer") == 0)
+        {
+            double expected = subtotal * 0.0861;
+            double round = Math.round(expected * 100.0) / 100.0;
+            Assert.assertEquals("Tax is wrong", round, tax, 0.001);
+        }
+
+        Assert.assertEquals("Sum of elements isn't equal to total price", total, subtotal + tax, 0.001);
+    }
+
+    public void checkHeadlineAgreement()
+    {
+        Assert.assertTrue("No headline on Order review", headlineAgreement.getText().compareTo("Confidentiality / Nondisclosure Agreement") == 0);
+    }
+
+    public void redirectToFollowUp()
+    {
+        toFollowUpButton.click();
+    }
+
+    public void wait500ms() throws InterruptedException
+    {
+        synchronized (wait) {
+            wait.wait(500);
+        }
+    }
+
+    public void wait1000ms() throws InterruptedException
+    {
+        synchronized (wait) {
+            wait.wait(1000);
+        }
     }
 
     public boolean isElementPresent(String locator) {

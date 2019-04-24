@@ -46,49 +46,49 @@ public class OrderFullTest {
         this.discount = discount;
     }
 
-    @Parameterized.Parameters(name = "{index} + 308)")
+    @Parameterized.Parameters(name = "{index} + 503)")
     public static Collection<Object[]> data()
     {
         Object[][] data = new Object[][]
                 {
-                        {"10000", "2x4", "Quick-turn", "Canada", "Quatsino", "2-day Canada JSI", true, true, false, "test"},
-                        //1 Тикет на ревью {"1000", "2x4", "Quick-turn", "United States", "Niagara Falls", "Ground 48 States JSI", false, true, false, "labore"},
-                        {"10000", "4x4", "Standard", "United States", "Niagara Falls", "2-day USA JSI", false, false, true, "none"},
+                        //{"10000", "2x4", "Quick-turn", "Canada", "Quatsino", "2-day Canada JSI", true, true, false, "test"},
+                        //{"1000", "2x4", "Quick-turn", "United States", "Niagara Falls", "Ground 48 States JSI", false, true, false, "labore"},
+                        //{"10000", "4x4", "Standard", "United States", "Niagara Falls", "2-day USA JSI", false, false, true, "none"},
                         {"5000", "4x6", "Early Bird", "Canada", "Quatsino", "Ground Canada JSI", true, false, true, "test2"},
-                        //4 Тикет на ревью {"500", "4x6", "Standard", "Canada", "Quatsino", "2-day Canada JSI", true, false, false, "labore"},
+                       // {"500", "4x6", "Standard", "Canada", "Quatsino", "2-day Canada JSI", true, false, false, "labore"},
                         {"2500", "2x4", "Early Bird", "United States", "Niagara Falls", "2-day USA JSI", true, true, true, "illum"},
-                        {"5000", "4x4", "Quick-turn", "United States", "Palmer", "Ground Hi & AK JSI", false, true, true, "facilis"},
+                        //{"5000", "4x4", "Quick-turn", "United States", "Palmer", "Ground Hi & AK JSI", false, true, true, "facilis"},
                         {"5000", "2x4", "Standard", "Canada", "Quatsino", "Ground Canada JSI", true, true, false, "cupiditate"},
-                        {"2500", "4x6", "Quick-turn", "Canada", "Quatsino", "Priority Canada JSI", true, true, false, "test"},
-                        {"1000", "4x6", "Early Bird", "United States", "Palmer", "Ground Hi & AK JSI", false, true, true, "test"},
-                        {"2500", "2x4", "Standard", "United States", "Niagara Falls", "Ground 48 States JSI", false, true, true, "facilis"},
-                        {"1000", "4x4", "Quick-turn", "Canada", "Quatsino", "Priority Canada JSI", true, false, true, "labore"},
+                       // {"2500", "4x6", "Quick-turn", "Canada", "Quatsino", "Priority Canada JSI", true, true, false, "test"},
+                        //{"1000", "4x6", "Early Bird", "United States", "Palmer", "Ground Hi & AK JSI", false, true, true, "test"},
+                        //{"2500", "2x4", "Standard", "United States", "Niagara Falls", "Ground 48 States JSI", false, true, true, "facilis"},
+                        //{"1000", "4x4", "Quick-turn", "Canada", "Quatsino", "Priority Canada JSI", true, false, true, "labore"},
                         {"500", "2x4", "Early Bird", "United States", "Niagara Falls", "2-day USA JSI", true, true, false, "cupiditate"},
                         {"10000", "4x6", "Standard", "Canada", "Quatsino", "Ground Canada JSI", true, false, true, "cupiditate"},
                         {"2500", "4x6", "Quick-turn", "United States", "Niagara Falls", "Overnight USA JSI", true, true, false, "test2"},
-                        //15 тикет на ревью {"500", "4x4", "Standard", "Canada", "Quatsino", "2-day Canada JSI", true, true, true, "labore"},
+                        //{"500", "4x4", "Standard", "Canada", "Quatsino", "2-day Canada JSI", true, true, true, "labore"},
                         {"5000", "4x4", "Standard", "United States", "Palmer", "Ground Hi & AK JSI", false, false, true, "test2"},
                         {"5000", "2x4", "Quick-turn", "Canada", "Quatsino", "2-day Canada JSI", false, true, true, "cupiditate"},
-                        {"10000", "2x4", "Early Bird", "United States", "Niagara Falls", "Overnight USA JSI", false, true, false, "labore"},
-                        {"2500", "4x4", "Early Bird", "United States", "Niagara Falls", "Ground 48 States JSI", true, false, true, "test"},
-                        {"500", "2x4", "Standard", "Canada", "Quatsino", "Priority Canada JSI", false, false, false, "test"},
+                        //{"10000", "2x4", "Early Bird", "United States", "Niagara Falls", "Overnight USA JSI", false, true, false, "labore"},
+                       // {"2500", "4x4", "Early Bird", "United States", "Niagara Falls", "Ground 48 States JSI", true, false, true, "test"},
+                        //{"500", "2x4", "Standard", "Canada", "Quatsino", "Priority Canada JSI", false, false, false, "test"},
                         {"1000", "4x6", "Quick-turn", "United States", "Niagara Falls", "Ground 48 States JSI", false, false, false, "cupiditate"},
-                        {"500", "4x4", "Quick-turn", "Canada", "Quatsino", "Ground Canada JSI", false, true, false, "facilis"},
+                        //{"500", "4x4", "Quick-turn", "Canada", "Quatsino", "Ground Canada JSI", false, true, false, "facilis"},
                         {"1000", "4x6", "Standard", "United States", "Palmer", "2-day USA JSI", false, true, false, "rerum"},
-                        {"5000", "4x4", "Early Bird", "Canada", "Quatsino", "Ground Canada JSI", true, true, false, "none"},
+                       // {"5000", "4x4", "Early Bird", "Canada", "Quatsino", "Ground Canada JSI", true, true, false, "none"},
                         {"10000", "4x4", "Quick-turn", "United States", "Niagara Falls", "Overnight USA JSI", true, false, true, "rerum"},
-                        {"2500", "4x6", "Standard", "Canada", "Quatsino", "2-day Canada JSI", false, true, false, "none"},
+                       // {"2500", "4x6", "Standard", "Canada", "Quatsino", "2-day Canada JSI", false, true, false, "none"},
                         {"2500", "2x4", "Early Bird", "United States", "Palmer", "Ground Hi & AK JSI", false, false, false, "illum"},
-                        {"5000", "4x6", "Quick-turn", "United States", "Palmer", "2-day USA JSI", true, true, true, "test"},
-                        {"10000", "4x6", "Quick-turn", "Canada", "Quatsino", "Priority Canada JSI", false, false, true, "none"},
+                       // {"5000", "4x6", "Quick-turn", "United States", "Palmer", "2-day USA JSI", true, true, true, "test"},
+                        //{"10000", "4x6", "Quick-turn", "Canada", "Quatsino", "Priority Canada JSI", false, false, true, "none"},
                         {"500", "4x6", "Standard", "United States", "Niagara Falls", "Overnight USA JSI", true, false, true, "illum"},
                         {"500", "2x4", "Quick-turn", "United States", "Niagara Falls", "2-day USA JSI", false, true, true, "none"},
                         {"1000", "2x4", "Quick-turn", "United States", "Niagara Falls", "Ground 48 States JSI", true, true, true, "illum"},
-                        {"2500", "2x4", "Early Bird", "Canada", "Quatsino", "Ground Canada JSI", false, false, true, "test"},
+                        //{"2500", "2x4", "Early Bird", "Canada", "Quatsino", "Ground Canada JSI", false, false, true, "test"},
                         {"10000", "4x4", "Quick-turn", "United States", "Palmer", "Ground Hi & AK JSI", false, true, false, "cupiditate"},
-                        {"500", "2x4", "Quick-turn", "United States", "Palmer", "Ground Hi & AK JSI", true, false, true, "none"},
+                       // {"500", "2x4", "Quick-turn", "United States", "Palmer", "Ground Hi & AK JSI", true, false, true, "none"},
                         {"5000", "2x4", "Early Bird", "Canada", "Quatsino", "2-day Canada JSI", true, false, false, "rerum"},
-                        {"5000", "4x6", "Standard", "United States", "Niagara Falls", "Ground 48 States JSI", false, false, true, "labore"},
+                       // {"5000", "4x6", "Standard", "United States", "Niagara Falls", "Ground 48 States JSI", false, false, true, "labore"},
                         {"10000", "4x4", "Early Bird", "United States", "Niagara Falls", "2-day USA JSI", false, false, false, "test2"},
                         {"1000", "2x4", "Quick-turn", "Canada", "Quatsino", "2-day Canada JSI", true, false, true, "test2"},
                         {"2500", "4x4", "Early Bird", "Canada", "Quatsino", "Priority Canada JSI", true, false, true, "rerum"},
@@ -147,31 +147,27 @@ public class OrderFullTest {
         site.homePage().startOrder(quantity, size, plan);
         site.orderPage().checkSummaryContactInfo(quantity, size, plan);
 
-        site.orderPage().enterCredentialsBilling(country, city);
+        String state = site.orderPage().enterCredentialsBilling("Amelia", "Pond", "Atlass Industries", "amelia@teamdoctor.com", "123 street, 54", "456 street, 5",
+                country, city, "1234567", "79043222367");
         site.orderPage().clickNext();
 
-        synchronized (wait) {
-            wait.wait(1500);
-        }
-
+        site.orderPage().wait1000ms();
         site.orderPage().chooseExtra(expressDesign, extraPrizes, variableData);
         site.orderPage().chooseShipping(shipping);
         site.orderPage().enterPromoCode(discount);
-        synchronized (wait) {
-            wait.wait(1000);
-        }
+        site.orderPage().wait1000ms();
         site.orderPage().checkSummaryOrderReview(quantity, size, plan, expressDesign, extraPrizes, variableData, shipping, discount);
         site.orderPage().clickNext();
 
-        site.orderPage().checkSummaryPayment(quantity, size, city, shipping, discount);
-        site.orderPage().enterCardCredential();
+        site.orderPage().checkSummaryPayment(quantity, size, city, shipping);
+        site.orderPage().enterCardCredential("Amelia", "4276450018854261", "01", "2020", "587");
         wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.className("order-success__title")));
-        site.orderPage().checkSummaryPayment(quantity, size, city, shipping, discount);
-        site.orderPage().checkEmail();
+        site.orderPage().checkSummaryPayment(quantity, size, city, shipping);
+        site.orderPage().checkEmail("amelia@teamdoctor.com");
 
         String orderNumber = site.orderPage().getOrderNumber();
         webDriver.get("http://95.213.252.23:3000/admin/");
-        site.adminOrderPage().checkOrder(orderNumber, quantity, size, plan, shipping, country, city, expressDesign, extraPrizes, variableData, discount);
+        site.adminOrderPage().checkOrder(orderNumber, quantity, size, plan, shipping, country, city, state, expressDesign, extraPrizes, variableData, discount);
     }
 
     @After

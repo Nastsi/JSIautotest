@@ -1,13 +1,10 @@
 package pages;
 
 import org.junit.Assert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class AdminOrderPage {
@@ -74,17 +71,38 @@ public class AdminOrderPage {
     @FindBy(xpath = "//div[2]/div[5]/p")
     WebElement phoneBilling;
 
-    @FindBy(xpath = "//tr[4]/td[2]/div/table/tbody/tr/td[2]/span")
-    WebElement nameShipping;
+    @FindBy(xpath = "//div[3]/div[2]/div/div/div/div/p")
+    WebElement firstNameShipping;
 
-    @FindBy(xpath = "//td[2]/div/table/tbody/tr[2]/td[2]/span")
+    @FindBy(xpath = "//div[3]/div[2]/div/div/div/div[2]/p")
+    WebElement lastNameShipping;
+
+    @FindBy(xpath = "//div[3]/div[2]/div/div/div/div[3]/p")
     WebElement companyShipping;
 
-    @FindBy(xpath = "//td[2]/div/table/tbody/tr[3]/td[2]/span")
+    @FindBy(xpath = "//div[3]/div[2]/div/div/div/div[4]/p")
+    WebElement emailShipping;
+
+    @FindBy(xpath = "//div[3]/div[2]/div/div/div/div[5]/p")
+    WebElement countryShipping;
+
+    @FindBy(xpath = "//div[3]/div[2]/div/div/div/div[6]/p")
+    WebElement stateShipping;
+
+    @FindBy(xpath = "//div[3]/div[2]/div/div/div[2]/div/p")
+    WebElement cityShipping;
+
+    @FindBy(xpath = "//div[3]/div[2]/div/div/div[2]/div[2]/p")
     WebElement addressShipping;
 
-    @FindBy(xpath = "//td[2]/div/table/tbody/tr[4]/td[2]/span")
-    WebElement cityStateShipping;
+    @FindBy(xpath = "//div[3]/div[2]/div/div/div[2]/div[3]/p")
+    WebElement address2Shipping;
+
+    @FindBy(xpath = "//div[3]/div[2]/div/div/div[2]/div[4]/p")
+    WebElement zipShipping;
+
+    @FindBy(xpath = "//div[3]/div[2]/div/div/div[2]/div[5]/p")
+    WebElement phoneShipping;
 
     @FindBy(xpath = "//div[2]/div/div/div/p")
     WebElement priceOfCards;
@@ -110,6 +128,9 @@ public class AdminOrderPage {
     @FindBy(xpath = "//div[2]/div/a")
     WebElement billToButton;
 
+    @FindBy(xpath = "//div[3]/div/a")
+    WebElement shipToButton;
+
     @FindBy(xpath = "//div[5]/div/a")
     WebElement amountButton;
 
@@ -119,7 +140,7 @@ public class AdminOrderPage {
     @FindBy(xpath = "//div[4]/div[2]/div/div[4]/p")
     WebElement paymentStatus;
 
-    public void checkOrder(String number, String quantityOrder, String sizeOrder, String planOrder, String shippingOrder, String country, String city, boolean expressDesign, boolean extraPrizes, boolean variableData, String discount) throws  InterruptedException
+    public void checkOrder(String number, String quantityOrder, String sizeOrder, String planOrder, String shippingOrder, String country, String city, String state, boolean expressDesign, boolean extraPrizes, boolean variableData, String discount) throws  InterruptedException
     {
         login.sendKeys("admin@admin.com");
         password.sendKeys("jsi");
@@ -150,6 +171,7 @@ public class AdminOrderPage {
         Assert.assertTrue("Address does not match", addressBilling.getText().compareTo("123 street, 54") == 0);
         Assert.assertTrue("Country does not match", countryBilling.getText().compareTo(country) == 0);
         Assert.assertTrue("City does not match", cityBilling.getText().compareTo(city) == 0);
+        Assert.assertTrue("State does not match", stateBilling.getText().compareTo(state) == 0);
         Assert.assertTrue("Zip does not match", zipBilling.getText().compareTo("1234567") == 0);
         Assert.assertTrue("Phone does not match", phoneBilling.getText().compareTo("79043222367") == 0);
         if (city.compareTo("Quatsino") == 0) Assert.assertTrue("City or state or zip does not match", stateBilling.getText().compareTo("British Columbia") == 0);
@@ -202,6 +224,25 @@ public class AdminOrderPage {
         double pay = Double.parseDouble(payment.getText());
         Assert.assertEquals("Payment in Payment info and Total in Amount does not match", total, pay, 0.001);
         Assert.assertTrue("Payment status is wrong", paymentStatus.getText().compareTo("Successful.") == 0);
+    }
+
+    public void checkOrderShipping(String country, String city, String state) throws InterruptedException
+    {
+        synchronized (wait) {
+            wait.wait(500);
+        }
+        shipToButton.click();
+        Assert.assertTrue("First name does not match", firstNameShipping.getText().compareTo("Rory") == 0);
+        Assert.assertTrue("Last name does not match", lastNameShipping.getText().compareTo("Williams") == 0);
+        Assert.assertTrue("Company does not match", companyShipping.getText().compareTo("Team Doctor") == 0);
+        Assert.assertTrue("Email does not match", emailShipping.getText().compareTo("rory@teamdoctor.com") == 0);
+        Assert.assertTrue("Address does not match", addressShipping.getText().compareTo("456 street, 78") == 0);
+        Assert.assertTrue("Address does not match", address2Shipping.getText().compareTo("Baker street 50") == 0);
+        Assert.assertTrue("Country does not match", countryShipping.getText().compareTo(country) == 0);
+        Assert.assertTrue("City does not match", cityShipping.getText().compareTo(city) == 0);
+        Assert.assertTrue("State does not match", stateShipping.getText().compareTo(state) == 0);
+        Assert.assertTrue("Zip does not match", zipShipping.getText().compareTo("7894561") == 0);
+        Assert.assertTrue("Phone does not match", phoneShipping.getText().compareTo("79515879564") == 0);
     }
 
     public void checkCardPrice(String quantitySelected, String sizeSelected, String planSelected)
@@ -276,7 +317,7 @@ public class AdminOrderPage {
 
     public double checkDiscountAndTax(String discount, String city)
     {
-        String substring;
+        String substring = " ";
         float cards;
         if (priceOfCards.getText().length() > 7)
         {
@@ -286,20 +327,21 @@ public class AdminOrderPage {
         else
         {
             cards = Float.parseFloat(priceOfCards.getText().substring(1));
+            substring = priceOfCards.getText().substring(1);
         }
         double disc;
         float extra = Float.parseFloat(priceOfExtra.getText().substring(1));
         float tax = Float.parseFloat(priceOfTax.getText().substring(1));
         if (discount.compareTo("test") == 0)
         {
-            Assert.assertTrue("Price of discount is wrong",priceOfDiscount.getText().compareTo("$10.00") == 0);
+            Assert.assertTrue("Price of discount is wrong",priceOfDiscount.getText().compareTo("$10") == 0);
             disc = Float.parseFloat(priceOfDiscount.getText().substring(1));
             calculatingTax(city, cards, disc, extra, tax);
             return disc;
         }
         else if (discount.compareTo("labore") == 0)
         {
-            if (cards > 936) Assert.assertTrue("Price of discount is wrong",priceOfDiscount.getText().compareTo("$936.00") == 0);
+            if (cards > 936) Assert.assertTrue("Price of discount is wrong",priceOfDiscount.getText().compareTo("$936") == 0);
             else Assert.assertTrue("Price of discount is wrong",priceOfDiscount.getText().compareTo(priceOfCards.getText()) == 0);
             disc = Float.parseFloat(priceOfDiscount.getText().substring(1));
             calculatingTax(city, cards, disc, extra, tax);
@@ -307,7 +349,7 @@ public class AdminOrderPage {
         }
         else if (discount.compareTo("facilis") == 0)
         {
-            if (cards > 241) Assert.assertTrue("Price of discount is wrong",priceOfDiscount.getText().compareTo("$241.00") == 0);
+            if (cards > 241) Assert.assertTrue("Price of discount is wrong",priceOfDiscount.getText().compareTo("$241") == 0);
             else Assert.assertTrue("Price of discount is wrong",priceOfDiscount.getText().compareTo(priceOfCards.getText()) == 0);
             disc = Float.parseFloat(priceOfDiscount.getText().substring(1));
             calculatingTax(city, cards, disc, extra, tax);
@@ -315,14 +357,14 @@ public class AdminOrderPage {
         }
         else if (discount.compareTo("test2") == 0)
         {
-            Assert.assertTrue("Price of discount is wrong",priceOfDiscount.getText().compareTo("100%") == 0);
+            Assert.assertTrue("Price of discount is wrong", priceOfDiscount.getText().compareTo("100%") == 0);
             disc = cards;
             calculatingTax(city, cards, disc, extra, tax);
             return disc;
         }
         else if (discount.compareTo("illum") == 0)
         {
-            Assert.assertTrue("Price of discount is wrong",priceOfDiscount.getText().compareTo("50%") == 0);
+            Assert.assertTrue("Price of discount is wrong", priceOfDiscount.getText().compareTo("50%") == 0);
             disc = cards;
             double discTrue = disc * 0.5;
             calculatingTax(city, cards, discTrue, extra, tax);
