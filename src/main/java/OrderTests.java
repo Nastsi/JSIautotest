@@ -73,7 +73,7 @@ public class OrderTests {
 
         site.orderPage().checkStep("Order Review");
         site.orderPage().checkStepDone("Contact Info");
-        site.orderPage().confirmShippingAndBillingIfNoShipping("Amelia Pond", "Atlass Industries", "123 street, 54 ,", "456 street, 5", "New York", state, "1234567");
+        site.orderPage().confirmShippingAndBillingIfNoShipping("Amelia Pond", "Atlass Industries", "123 street, 54,", "456 street, 5", "New York", state, "1234567");
     }
 
     @Test
@@ -89,8 +89,8 @@ public class OrderTests {
 
         site.orderPage().checkStep("Order Review");
         site.orderPage().checkStepDone("Contact Info");
-        site.orderPage().confirmShippingAndBillingWithShipping("Amelia Pond", "Atlass Industries", "123 street, 54 ,", "456 street, 5","New York",
-                stateBilling, "1234567", "Rory Williams", "Team Doctor", "456 street, 78 ,", "Baker street 50", "Ulverton",
+        site.orderPage().confirmShippingAndBillingWithShipping("Amelia Pond", "Atlass Industries", "123 street, 54,", "456 street, 5","New York",
+                stateBilling, "1234567", "Rory Williams", "Team Doctor", "456 street, 78,", "Baker street 50", "Ulverton",
                 stateShipping, "7894561");
     }
 
@@ -102,7 +102,7 @@ public class OrderTests {
 
         site.orderPage().checkStep("Order Review");
         site.orderPage().checkStepDone("Contact Info");
-        site.orderPage().confirmShippingAndBillingIfNoShipping("Amelia Pond", "Atlass Industries", "123 street, 54 ,", "456 street, 5", "New York", state, "1234567");
+        site.orderPage().confirmShippingAndBillingIfNoShipping("Amelia Pond", "Atlass Industries", "123 street, 54,", "456 street, 5", "New York", state, "1234567");
 
         site.orderPage().chooseExtra(true, true, true);
         site.orderPage().chooseShipping("2-day USA JSI");
@@ -224,7 +224,7 @@ public class OrderTests {
 
         String orderNumber = site.orderPage().getOrderNumber();
         webDriver.get("http://95.213.252.23:3000/admin/");
-        site.adminOrderPage().checkOrder(orderNumber, "", "", "Design only", "", "United States", "New York Mills", state, true, false,
+        site.adminOrderPage().checkOrder(orderNumber, "0", "", "Design only", "", "United States", "New York Mills", state, true, false,
                 false, "none");
 
     }

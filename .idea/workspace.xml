@@ -17,10 +17,28 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/HomeTests.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pages/FollowUpPage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="28" column="9" lean-forward="true" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
+            <state relative-caret-position="235">
+              <caret line="391" column="36" selection-start-line="391" selection-start-column="36" selection-end-line="391" selection-end-column="36" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#8640#8773#0" />
+                <element signature="e#9082#9188#0" />
+                <element signature="e#9435#9622#0" />
+                <element signature="e#9595#9796#0" />
+                <element signature="e#9723#9854#0" />
+                <element signature="e#9860#9993#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/FollowUpWithoutExtraTests.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="136" column="8" lean-forward="true" selection-start-line="136" selection-start-column="8" selection-end-line="136" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -29,14 +47,12 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pages/HomePage.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/FollowUpAllExtra.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
-              <caret line="85" column="67" selection-start-line="85" selection-start-column="67" selection-end-line="85" selection-end-column="67" />
+            <state relative-caret-position="423">
+              <caret line="130" column="45" selection-start-line="130" selection-start-column="45" selection-end-line="130" selection-end-column="45" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2970#2971#0" expanded="true" />
-                <element signature="e#3009#3010#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -45,12 +61,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/FollowUpTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="58" column="63" selection-start-line="58" selection-start-column="63" selection-end-line="58" selection-end-column="63" />
+            <state relative-caret-position="249">
+              <caret line="33" column="65" lean-forward="true" selection-start-line="33" selection-start-column="65" selection-end-line="33" selection-end-column="65" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#574#575#0" expanded="true" />
-                <element signature="e#614#615#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -59,8 +73,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/OrderTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="265">
-              <caret line="246" column="8" lean-forward="true" selection-start-line="246" selection-start-column="8" selection-end-line="246" selection-end-column="38" />
+            <state relative-caret-position="-3053">
+              <caret line="40" column="50" lean-forward="true" selection-start-line="40" selection-start-column="50" selection-end-line="40" selection-end-column="50" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -69,25 +83,12 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pages/FollowUpPage.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="5" lean-forward="true" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/pages/OrderPage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="248">
-              <caret line="1290" column="8" lean-forward="true" selection-start-line="1290" selection-start-column="8" selection-end-line="1290" selection-end-column="8" />
+            <state relative-caret-position="364">
+              <caret line="919" column="8" selection-start-line="919" selection-start-column="8" selection-end-line="920" selection-end-column="49" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#3482#5004#0" />
                 <element signature="e#5010#6528#0" />
                 <element signature="e#6534#7560#0" />
                 <element signature="e#7566#9953#0" />
@@ -113,7 +114,6 @@
                 <element signature="e#24489#25462#0" />
                 <element signature="e#22971#24097#0" />
                 <element signature="e#24633#25431#0" />
-                <element signature="e#26301#27121#0" />
                 <element signature="e#27127#27799#0" />
                 <element signature="e#30161#30979#0" />
                 <element signature="e#28496#29734#0" />
@@ -121,7 +121,6 @@
                 <element signature="e#31865#31980#0" />
                 <element signature="e#32506#32667#0" />
                 <element signature="e#33070#33646#0" />
-                <element signature="e#34350#34484#0" />
                 <element signature="e#34459#34622#0" />
                 <element signature="e#27232#27367#0" />
                 <element signature="e#27891#28425#0" />
@@ -144,7 +143,6 @@
                 <element signature="e#73734#73893#0" />
                 <element signature="e#76935#77068#0" />
                 <element signature="e#73192#73325#0" />
-                <element signature="e#65297#65526#0" />
               </folding>
             </state>
           </provider>
@@ -153,27 +151,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/OrderFullTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="162" column="8" lean-forward="true" selection-start-line="162" selection-start-column="8" selection-end-line="163" selection-end-column="108" />
+            <state relative-caret-position="362">
+              <caret line="74" column="26" selection-start-line="74" selection-start-column="26" selection-end-line="74" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pages/AdminOrderPage.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-143">
-              <caret line="228" column="78" selection-start-line="228" selection-start-column="78" selection-end-line="228" selection-end-column="105" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#checkCardPrice#0;class#MailTrapPage#0" />
-                <element signature="method#calculatingTax#0;class#AdminOrderPage#0" />
-                <element signature="method#checkDiscountAndTax#0;class#AdminOrderPage#0" />
-                <element signature="method#checkExtra#0;class#MailTrapPage#0" />
-                <element signature="method#checkShipping#0;class#MailTrapPage#0" />
               </folding>
             </state>
           </provider>
@@ -190,10 +171,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>New</find>
-      <find>Niagara</find>
-      <find>/div/label/span</find>
-      <find>div/div/div/div/label/span</find>
       <find>.order-confirm div:nth-child(1)</find>
       <find>1, 2</find>
       <find>%2</find>
@@ -215,11 +192,15 @@
       <find>checkExtra</find>
       <find>orders</find>
       <find>//div[2]/div/div[2]/span[2]</find>
-      <find>City does not match</find>
       <find>confirmShippingAndBillingIfNoShipping</find>
       <find>enterCredentialShipping</find>
       <find>confirmShippingAndBillingWithShipping</find>
+      <find>cardNameValidation</find>
+      <find>City does not match</find>
+      <find>illum</find>
       <find>enterCardCredential</find>
+      <find>//div/div[5]</find>
+      <find>checkDiscount</find>
     </findStrings>
   </component>
   <component name="IdeDocumentHistory">
@@ -231,22 +212,27 @@
         <option value="$PROJECT_DIR$/src/main/java/ParametrizedTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/HomeTests.java" />
         <option value="$PROJECT_DIR$/src/main/java/pages/MailTrapPage.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pages/JsiSite.java" />
         <option value="$PROJECT_DIR$/src/main/java/pages/HomePage.java" />
         <option value="$PROJECT_DIR$/src/main/java/pages/AdminOrderPage.java" />
-        <option value="$PROJECT_DIR$/src/main/java/OrderFullTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/OrderTests.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pages/FollowUpPage.java" />
-        <option value="$PROJECT_DIR$/src/main/java/FollowUpTests.java" />
         <option value="$PROJECT_DIR$/src/main/java/pages/OrderPage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pages/JsiSite.java" />
+        <option value="$PROJECT_DIR$/src/main/java/OrderTests.java" />
+        <option value="$PROJECT_DIR$/src/main/java/FollowUpParamTests.java" />
+        <option value="$PROJECT_DIR$/src/main/java/FollowUpVariableDataTests.java" />
+        <option value="$PROJECT_DIR$/src/main/java/FollowUpExraPrizesTests.java" />
+        <option value="$PROJECT_DIR$/src/main/java/OrderFullTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/FollowUpTests.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pages/FollowUpPage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/FollowUpAllExtra.java" />
+        <option value="$PROJECT_DIR$/src/main/java/FollowUpWithoutExtraTests.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="1420" />
-    <option name="y" value="103" />
-    <option name="width" value="1346" />
-    <option name="height" value="688" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -312,52 +298,51 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.OrderTests.testContactInfoOnlyBilling">
-    <configuration name="OrderFullTest.testOrderFull" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.FollowUpTests">
+    <configuration name="FollowUpTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="automation" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="OrderFullTest" />
-      <option name="METHOD_NAME" value="testOrderFull" />
+      <option name="MAIN_CLASS_NAME" value="FollowUpTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FollowUpTests.goldPrizeQuantityCorrect" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="automation" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="FollowUpTests" />
+      <option name="METHOD_NAME" value="goldPrizeQuantityCorrect" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="OrderTests.testContactInfoOnlyBilling" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="FollowUpTests.prizesQuantityCorrect" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="automation" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="OrderTests" />
-      <option name="METHOD_NAME" value="testContactInfoOnlyBilling" />
+      <option name="MAIN_CLASS_NAME" value="FollowUpTests" />
+      <option name="METHOD_NAME" value="prizesQuantityCorrect" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="OrderTests.testDesignOnly" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="FollowUpTests.submitActivity" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="automation" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="OrderTests" />
-      <option name="METHOD_NAME" value="testDesignOnly" />
+      <option name="MAIN_CLASS_NAME" value="FollowUpTests" />
+      <option name="METHOD_NAME" value="submitActivity" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="OrderTests.testDesignOnlyWithExtra" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="FollowUpTests.testSendMessage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="automation" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="OrderTests" />
-      <option name="METHOD_NAME" value="testDesignOnlyWithExtra" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="OrderTests.testOrderInAdminWithShipping" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="automation" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="OrderTests" />
-      <option name="METHOD_NAME" value="testOrderInAdminWithShipping" />
+      <option name="MAIN_CLASS_NAME" value="FollowUpTests" />
+      <option name="METHOD_NAME" value="testSendMessage" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -365,11 +350,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.OrderTests.testContactInfoOnlyBilling" />
-        <item itemvalue="JUnit.OrderTests.testOrderInAdminWithShipping" />
-        <item itemvalue="JUnit.OrderFullTest.testOrderFull" />
-        <item itemvalue="JUnit.OrderTests.testDesignOnlyWithExtra" />
-        <item itemvalue="JUnit.OrderTests.testDesignOnly" />
+        <item itemvalue="JUnit.FollowUpTests" />
+        <item itemvalue="JUnit.FollowUpTests.goldPrizeQuantityCorrect" />
+        <item itemvalue="JUnit.FollowUpTests.prizesQuantityCorrect" />
+        <item itemvalue="JUnit.FollowUpTests.submitActivity" />
+        <item itemvalue="JUnit.FollowUpTests.testSendMessage" />
       </list>
     </recent_temporary>
   </component>
@@ -387,35 +372,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="OrderFullTest_testOrderFull - 2019.04.24 at 11h 36m 58s.xml">
-      <configuration name="OrderFullTest.testOrderFull" configurationId="JUnit" />
+    <history-entry file="FollowUpTests_submitActivity - 2019.05.06 at 14h 07m 33s.xml">
+      <configuration name="FollowUpTests.submitActivity" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="OrderFullTest_testOrderFull - 2019.04.24 at 11h 44m 16s.xml">
-      <configuration name="OrderFullTest.testOrderFull" configurationId="JUnit" />
+    <history-entry file="FollowUpTests_prizesQuantityCorrect - 2019.05.06 at 15h 24m 03s.xml">
+      <configuration name="FollowUpTests.prizesQuantityCorrect" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="OrderTests_testOrderInAdminWithShipping - 2019.04.24 at 14h 38m 27s.xml">
-      <configuration name="OrderTests.testOrderInAdminWithShipping" configurationId="JUnit" />
+    <history-entry file="FollowUpTests_prizesQuantityCorrect - 2019.05.06 at 15h 33m 42s.xml">
+      <configuration name="FollowUpTests.prizesQuantityCorrect" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="OrderTests_testOrderInAdminWithShipping - 2019.04.24 at 14h 40m 35s.xml">
-      <configuration name="OrderTests.testOrderInAdminWithShipping" configurationId="JUnit" />
+    <history-entry file="FollowUpTests_prizesQuantityCorrect - 2019.05.06 at 15h 37m 07s.xml">
+      <configuration name="FollowUpTests.prizesQuantityCorrect" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="OrderTests_testOrderInAdminWithShipping - 2019.04.24 at 14h 42m 08s.xml">
-      <configuration name="OrderTests.testOrderInAdminWithShipping" configurationId="JUnit" />
+    <history-entry file="FollowUpTests_goldPrizeQuantityCorrect - 2019.05.06 at 15h 54m 09s.xml">
+      <configuration name="FollowUpTests.goldPrizeQuantityCorrect" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="OrderTests_testOrderInAdminWithShipping - 2019.04.24 at 14h 44m 43s.xml">
-      <configuration name="OrderTests.testOrderInAdminWithShipping" configurationId="JUnit" />
+    <history-entry file="FollowUpTests_goldPrizeQuantityCorrect - 2019.05.06 at 15h 55m 13s.xml">
+      <configuration name="FollowUpTests.goldPrizeQuantityCorrect" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="OrderTests_testOrderInAdminWithShipping - 2019.04.24 at 14h 47m 16s.xml">
-      <configuration name="OrderTests.testOrderInAdminWithShipping" configurationId="JUnit" />
+    <history-entry file="FollowUpTests_goldPrizeQuantityCorrect - 2019.05.06 at 15h 57m 57s.xml">
+      <configuration name="FollowUpTests.goldPrizeQuantityCorrect" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="OrderTests_testContactInfoOnlyBilling - 2019.04.24 at 14h 52m 37s.xml">
-      <configuration name="OrderTests.testContactInfoOnlyBilling" configurationId="JUnit" />
+    <history-entry file="FollowUpTests_goldPrizeQuantityCorrect - 2019.05.06 at 16h 01m 04s.xml">
+      <configuration name="FollowUpTests.goldPrizeQuantityCorrect" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="OrderTests_testContactInfoOnlyBilling - 2019.04.24 at 14h 54m 55s.xml">
-      <configuration name="OrderTests.testContactInfoOnlyBilling" configurationId="JUnit" />
+    <history-entry file="FollowUpTests_goldPrizeQuantityCorrect - 2019.05.06 at 16h 01m 29s.xml">
+      <configuration name="FollowUpTests.goldPrizeQuantityCorrect" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="OrderTests_testContactInfoOnlyBilling - 2019.04.24 at 14h 55m 54s.xml">
-      <configuration name="OrderTests.testContactInfoOnlyBilling" configurationId="JUnit" />
+    <history-entry file="FollowUpTests - 2019.05.06 at 16h 04m 12s.xml">
+      <configuration name="FollowUpTests" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TodoView">
@@ -428,10 +413,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1358" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12153518" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17246597" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -440,7 +425,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49924356" visible="true" weight="0.33261105" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49924356" visible="true" weight="0.502455" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.37811485" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -459,7 +444,7 @@
       <window_info anchor="right" id="Palette&#9;" order="7" />
     </layout>
     <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12153518" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12153518" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -469,7 +454,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49924356" weight="0.33261105" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.37811485" />
+      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.37811485" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32827735" />
@@ -490,52 +475,52 @@
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
       <expression>
-        <expression-string>firstNameShipping.getText()</expression-string>
+        <expression-string>webDriver.findElement(By.xpath(&quot;//div/div[5]&quot;)).getText()</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>orderStepStatusDone.getText()</expression-string>
+        <expression-string>site.followUpPage().isElementPresent(&quot;//div/div[5]&quot;)</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>priceOfCards.getText()</expression-string>
+        <expression-string>webDriver.findElement(By.xpath(&quot;//div/div[5]&quot;);</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>Float.parseFloat(priceOfCards.getText().substring(1))</expression-string>
+        <expression-string>webDriver.findElement(By.xpath(&quot;//p[contains(.,'You scheduled a call by 05/23/19, afternoon. A consultant will contact you to follow the next steps, stay tuned!')]&quot;)).getText().substring(24, 31)</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>priceOfCards.getText().substring(1)</expression-string>
+        <expression-string>webDriver.findElement(By.xpath(&quot;//p[contains(.,'You scheduled a call by 05/23/19, afternoon. A consultant will contact you to follow the next steps, stay tuned!')]&quot;)).getText()</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>cityStateShippingConfirm.getText()</expression-string>
+        <expression-string>webDriver.findElement(By.xpath(&quot;//p[contains(.,'You scheduled a call by 07/05/19, afternoon. A consultant will contact you to follow the next steps, stay tuned!')]&quot;)).getText()</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>cityShipping + &quot;, &quot; + stateShipping + &quot;, &quot; + zipShipping</expression-string>
+        <expression-string>webDriver.findElement(By.xpath(&quot;//p[contains(.,'You scheduled a call by 07/05/19, afternoon. A consultant will contact you to follow the next steps, stay tuned!')]&quot;)).getText().substring(24, 31)</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>expected</expression-string>
+        <expression-string>webDriver.findElement(By.xpath(&quot;//p[contains(.,'You scheduled a call by 07/05/19, afternoon. A consultant will contact you to follow the next steps, stay tuned!')]&quot;)) .getText().substring(24, 31)</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>expected * 100.0</expression-string>
+        <expression-string>phoneNumber.getText()</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>Math.round(expected * 100.0)</expression-string>
+        <expression-string>phoneNumber.getText().compareTo(number)</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
@@ -607,13 +592,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ParametrizedTest.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/pages/JsiSite.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="14" lean-forward="true" selection-start-column="14" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk-12/lib/src.zip!/java.base/java/lang/ref/Reference.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="183">
@@ -655,8 +633,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pages/AdminOrderPage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-143">
-          <caret line="228" column="78" selection-start-line="228" selection-start-column="78" selection-end-line="228" selection-end-column="105" />
+        <state relative-caret-position="250">
+          <caret line="150" lean-forward="true" selection-start-line="150" selection-end-line="150" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#checkCardPrice#0;class#MailTrapPage#0" />
@@ -668,10 +646,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pages/FollowUpPage.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/pages/FollowUpExraPrizesTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="5" lean-forward="true" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+        <state relative-caret-position="68">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pages/JsiSite.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/FollowUpVariableDataTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="841">
+          <caret line="107" column="5" selection-start-line="107" selection-start-column="5" selection-end-line="107" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/FollowUpExraPrizesTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="841">
+          <caret line="107" column="5" selection-start-line="107" selection-start-column="5" selection-end-line="107" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -680,8 +682,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/OrderFullTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="162" column="8" lean-forward="true" selection-start-line="162" selection-start-column="8" selection-end-line="163" selection-end-column="108" />
+        <state relative-caret-position="362">
+          <caret line="74" column="26" selection-start-line="74" selection-start-column="26" selection-end-line="74" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -690,33 +692,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/OrderTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="246" column="8" lean-forward="true" selection-start-line="246" selection-start-column="8" selection-end-line="246" selection-end-column="38" />
+        <state relative-caret-position="-3053">
+          <caret line="40" column="50" lean-forward="true" selection-start-line="40" selection-start-column="50" selection-end-line="40" selection-end-column="50" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/FollowUpTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="58" column="63" selection-start-line="58" selection-start-column="63" selection-end-line="58" selection-end-column="63" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#574#575#0" expanded="true" />
-            <element signature="e#614#615#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pages/OrderPage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="1290" column="8" lean-forward="true" selection-start-line="1290" selection-start-column="8" selection-end-line="1290" selection-end-column="8" />
+        <state relative-caret-position="364">
+          <caret line="919" column="8" selection-start-line="919" selection-start-column="8" selection-end-line="920" selection-end-column="49" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3482#5004#0" />
             <element signature="e#5010#6528#0" />
             <element signature="e#6534#7560#0" />
             <element signature="e#7566#9953#0" />
@@ -742,7 +731,6 @@
             <element signature="e#24489#25462#0" />
             <element signature="e#22971#24097#0" />
             <element signature="e#24633#25431#0" />
-            <element signature="e#26301#27121#0" />
             <element signature="e#27127#27799#0" />
             <element signature="e#30161#30979#0" />
             <element signature="e#28496#29734#0" />
@@ -750,7 +738,6 @@
             <element signature="e#31865#31980#0" />
             <element signature="e#32506#32667#0" />
             <element signature="e#33070#33646#0" />
-            <element signature="e#34350#34484#0" />
             <element signature="e#34459#34622#0" />
             <element signature="e#27232#27367#0" />
             <element signature="e#27891#28425#0" />
@@ -773,7 +760,52 @@
             <element signature="e#73734#73893#0" />
             <element signature="e#76935#77068#0" />
             <element signature="e#73192#73325#0" />
-            <element signature="e#65297#65526#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/FollowUpTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="249">
+          <caret line="33" column="65" lean-forward="true" selection-start-line="33" selection-start-column="65" selection-end-line="33" selection-end-column="65" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/FollowUpAllExtra.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="423">
+          <caret line="130" column="45" selection-start-line="130" selection-start-column="45" selection-end-line="130" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pages/FollowUpPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="235">
+          <caret line="391" column="36" selection-start-line="391" selection-start-column="36" selection-end-line="391" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#8640#8773#0" />
+            <element signature="e#9082#9188#0" />
+            <element signature="e#9435#9622#0" />
+            <element signature="e#9595#9796#0" />
+            <element signature="e#9723#9854#0" />
+            <element signature="e#9860#9993#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/FollowUpWithoutExtraTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="136" column="8" lean-forward="true" selection-start-line="136" selection-start-column="8" selection-end-line="136" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
