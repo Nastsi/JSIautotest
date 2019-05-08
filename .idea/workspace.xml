@@ -19,8 +19,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/pages/FollowUpPage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="235">
-              <caret line="391" column="36" selection-start-line="391" selection-start-column="36" selection-end-line="391" selection-end-column="36" />
+            <state relative-caret-position="-3580">
+              <caret line="114" column="22" lean-forward="true" selection-start-line="114" selection-start-column="22" selection-end-line="114" selection-end-column="45" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#8640#8773#0" />
@@ -37,8 +37,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/FollowUpWithoutExtraTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="136" column="8" lean-forward="true" selection-start-line="136" selection-start-column="8" selection-end-line="136" selection-end-column="8" />
+            <state relative-caret-position="572">
+              <caret line="100" column="32" selection-start-line="100" selection-start-column="32" selection-end-line="100" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -49,7 +49,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/FollowUpAllExtra.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="423">
+            <state relative-caret-position="-330">
               <caret line="130" column="45" selection-start-line="130" selection-start-column="45" selection-end-line="130" selection-end-column="45" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -85,8 +85,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/pages/OrderPage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="364">
-              <caret line="919" column="8" selection-start-line="919" selection-start-column="8" selection-end-line="920" selection-end-column="49" />
+            <state relative-caret-position="467">
+              <caret line="1290" selection-start-line="1290" selection-end-line="1290" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#5010#6528#0" />
@@ -141,6 +141,7 @@
                 <element signature="e#74047#74204#0" />
                 <element signature="e#74322#75382#0" />
                 <element signature="e#73734#73893#0" />
+                <element signature="e#77074#77075#0" expanded="true" />
                 <element signature="e#76935#77068#0" />
                 <element signature="e#73192#73325#0" />
               </folding>
@@ -151,8 +152,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/OrderFullTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="362">
-              <caret line="74" column="26" selection-start-line="74" selection-start-column="26" selection-end-line="74" selection-end-column="26" />
+            <state relative-caret-position="107">
+              <caret line="44" column="35" lean-forward="true" selection-start-line="44" selection-start-column="35" selection-end-line="44" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -220,19 +221,19 @@
         <option value="$PROJECT_DIR$/src/main/java/FollowUpParamTests.java" />
         <option value="$PROJECT_DIR$/src/main/java/FollowUpVariableDataTests.java" />
         <option value="$PROJECT_DIR$/src/main/java/FollowUpExraPrizesTests.java" />
-        <option value="$PROJECT_DIR$/src/main/java/OrderFullTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/FollowUpTests.java" />
         <option value="$PROJECT_DIR$/src/main/java/pages/FollowUpPage.java" />
         <option value="$PROJECT_DIR$/src/main/java/FollowUpAllExtra.java" />
+        <option value="$PROJECT_DIR$/src/main/java/OrderFullTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/FollowUpWithoutExtraTests.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="744" />
+    <option name="x" value="1596" />
+    <option name="y" value="113" />
+    <option name="width" value="1346" />
+    <option name="height" value="688" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -298,7 +299,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.FollowUpTests">
+  <component name="RunManager" selected="JUnit.FollowUpWithoutExtraTests">
     <configuration name="FollowUpTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="automation" />
       <option name="PACKAGE_NAME" value="" />
@@ -318,43 +319,41 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FollowUpTests.prizesQuantityCorrect" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="FollowUpWithoutExtraTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="automation" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="FollowUpTests" />
-      <option name="METHOD_NAME" value="prizesQuantityCorrect" />
+      <option name="MAIN_CLASS_NAME" value="FollowUpWithoutExtraTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FollowUpWithoutExtraTests.testWithoutExtras" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="automation" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="FollowUpWithoutExtraTests" />
+      <option name="METHOD_NAME" value="testWithoutExtras" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FollowUpTests.submitActivity" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="OrderFullTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="automation" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="FollowUpTests" />
-      <option name="METHOD_NAME" value="submitActivity" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="FollowUpTests.testSendMessage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="automation" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="FollowUpTests" />
-      <option name="METHOD_NAME" value="testSendMessage" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="OrderFullTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.FollowUpWithoutExtraTests" />
+        <item itemvalue="JUnit.OrderFullTest" />
+        <item itemvalue="JUnit.FollowUpWithoutExtraTests.testWithoutExtras" />
         <item itemvalue="JUnit.FollowUpTests" />
         <item itemvalue="JUnit.FollowUpTests.goldPrizeQuantityCorrect" />
-        <item itemvalue="JUnit.FollowUpTests.prizesQuantityCorrect" />
-        <item itemvalue="JUnit.FollowUpTests.submitActivity" />
-        <item itemvalue="JUnit.FollowUpTests.testSendMessage" />
       </list>
     </recent_temporary>
   </component>
@@ -372,35 +371,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="FollowUpTests_submitActivity - 2019.05.06 at 14h 07m 33s.xml">
-      <configuration name="FollowUpTests.submitActivity" configurationId="JUnit" />
+    <history-entry file="FollowUpWithoutExtraTests_testWithoutExtras - 2019.05.08 at 14h 49m 14s.xml">
+      <configuration name="FollowUpWithoutExtraTests.testWithoutExtras" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FollowUpTests_prizesQuantityCorrect - 2019.05.06 at 15h 24m 03s.xml">
-      <configuration name="FollowUpTests.prizesQuantityCorrect" configurationId="JUnit" />
+    <history-entry file="OrderFullTest - 2019.05.08 at 14h 50m 49s.xml">
+      <configuration name="OrderFullTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FollowUpTests_prizesQuantityCorrect - 2019.05.06 at 15h 33m 42s.xml">
-      <configuration name="FollowUpTests.prizesQuantityCorrect" configurationId="JUnit" />
+    <history-entry file="OrderFullTest - 2019.05.08 at 14h 52m 04s.xml">
+      <configuration name="OrderFullTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FollowUpTests_prizesQuantityCorrect - 2019.05.06 at 15h 37m 07s.xml">
-      <configuration name="FollowUpTests.prizesQuantityCorrect" configurationId="JUnit" />
+    <history-entry file="FollowUpWithoutExtraTests - 2019.05.08 at 14h 52m 56s.xml">
+      <configuration name="FollowUpWithoutExtraTests" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FollowUpTests_goldPrizeQuantityCorrect - 2019.05.06 at 15h 54m 09s.xml">
-      <configuration name="FollowUpTests.goldPrizeQuantityCorrect" configurationId="JUnit" />
+    <history-entry file="OrderFullTest - 2019.05.08 at 14h 55m 30s.xml">
+      <configuration name="OrderFullTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FollowUpTests_goldPrizeQuantityCorrect - 2019.05.06 at 15h 55m 13s.xml">
-      <configuration name="FollowUpTests.goldPrizeQuantityCorrect" configurationId="JUnit" />
+    <history-entry file="FollowUpWithoutExtraTests - 2019.05.08 at 14h 56m 16s.xml">
+      <configuration name="FollowUpWithoutExtraTests" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FollowUpTests_goldPrizeQuantityCorrect - 2019.05.06 at 15h 57m 57s.xml">
-      <configuration name="FollowUpTests.goldPrizeQuantityCorrect" configurationId="JUnit" />
+    <history-entry file="FollowUpWithoutExtraTests - 2019.05.08 at 15h 01m 47s.xml">
+      <configuration name="FollowUpWithoutExtraTests" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FollowUpTests_goldPrizeQuantityCorrect - 2019.05.06 at 16h 01m 04s.xml">
-      <configuration name="FollowUpTests.goldPrizeQuantityCorrect" configurationId="JUnit" />
+    <history-entry file="FollowUpWithoutExtraTests - 2019.05.08 at 15h 02m 32s.xml">
+      <configuration name="FollowUpWithoutExtraTests" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FollowUpTests_goldPrizeQuantityCorrect - 2019.05.06 at 16h 01m 29s.xml">
-      <configuration name="FollowUpTests.goldPrizeQuantityCorrect" configurationId="JUnit" />
+    <history-entry file="FollowUpWithoutExtraTests - 2019.05.08 at 15h 03m 16s.xml">
+      <configuration name="FollowUpWithoutExtraTests" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FollowUpTests - 2019.05.06 at 16h 04m 12s.xml">
-      <configuration name="FollowUpTests" configurationId="JUnit" />
+    <history-entry file="FollowUpWithoutExtraTests - 2019.05.08 at 15h 05m 55s.xml">
+      <configuration name="FollowUpWithoutExtraTests" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TodoView">
@@ -413,10 +412,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="1358" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17246597" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12153518" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -425,8 +424,8 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49924356" visible="true" weight="0.502455" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.37811485" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49924356" weight="0.33261105" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.22210184" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32827735" />
@@ -471,6 +470,24 @@
       <window_info anchor="right" id="Capture Analysis" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
     </layout-to-restore>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/FollowUpWithoutExtraTests.java</url>
+          <line>186</line>
+          <properties />
+          <option name="timeStamp" value="974" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/pages/OrderPage.java</url>
+          <line>1290</line>
+          <properties />
+          <option name="timeStamp" value="976" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
@@ -680,12 +697,48 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/OrderFullTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/FollowUpTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="362">
-          <caret line="74" column="26" selection-start-line="74" selection-start-column="26" selection-end-line="74" selection-end-column="26" />
+        <state relative-caret-position="249">
+          <caret line="33" column="65" lean-forward="true" selection-start-line="33" selection-start-column="65" selection-end-line="33" selection-end-column="65" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/FollowUpAllExtra.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-330">
+          <caret line="130" column="45" selection-start-line="130" selection-start-column="45" selection-end-line="130" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/OrderFullTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="107">
+          <caret line="44" column="35" lean-forward="true" selection-start-line="44" selection-start-column="35" selection-end-line="44" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pages/FollowUpPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3580">
+          <caret line="114" column="22" lean-forward="true" selection-start-line="114" selection-start-column="22" selection-end-line="114" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#8640#8773#0" />
+            <element signature="e#9082#9188#0" />
+            <element signature="e#9435#9622#0" />
+            <element signature="e#9595#9796#0" />
+            <element signature="e#9723#9854#0" />
+            <element signature="e#9860#9993#0" />
           </folding>
         </state>
       </provider>
@@ -702,8 +755,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pages/OrderPage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="919" column="8" selection-start-line="919" selection-start-column="8" selection-end-line="920" selection-end-column="49" />
+        <state relative-caret-position="467">
+          <caret line="1290" selection-start-line="1290" selection-end-line="1290" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#5010#6528#0" />
@@ -758,52 +811,17 @@
             <element signature="e#74047#74204#0" />
             <element signature="e#74322#75382#0" />
             <element signature="e#73734#73893#0" />
+            <element signature="e#77074#77075#0" expanded="true" />
             <element signature="e#76935#77068#0" />
             <element signature="e#73192#73325#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/FollowUpTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="33" column="65" lean-forward="true" selection-start-line="33" selection-start-column="65" selection-end-line="33" selection-end-column="65" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/FollowUpAllExtra.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="423">
-          <caret line="130" column="45" selection-start-line="130" selection-start-column="45" selection-end-line="130" selection-end-column="45" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pages/FollowUpPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="391" column="36" selection-start-line="391" selection-start-column="36" selection-end-line="391" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#8640#8773#0" />
-            <element signature="e#9082#9188#0" />
-            <element signature="e#9435#9622#0" />
-            <element signature="e#9595#9796#0" />
-            <element signature="e#9723#9854#0" />
-            <element signature="e#9860#9993#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/FollowUpWithoutExtraTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="136" column="8" lean-forward="true" selection-start-line="136" selection-start-column="8" selection-end-line="136" selection-end-column="8" />
+        <state relative-caret-position="572">
+          <caret line="100" column="32" selection-start-line="100" selection-start-column="32" selection-end-line="100" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
